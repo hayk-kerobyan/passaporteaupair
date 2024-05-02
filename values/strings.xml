@@ -1,0 +1,152 @@
+<resources>
+    <string name="cd_logo">Website logo</string>
+    <string name="toolbar_label_about">About the program</string>
+    <string name="toolbar_label_products">Products for sale</string>
+    <string name="toolbar_label_feedback">Feedbacks</string>
+    <string name="toolbar_label_faq">FAQ</string>
+    <string name="cd_instagram">Instagram icon</string>
+    <string name="cd_youtube">Youtube icon</string>
+    <string name="home_section_title">Your door to</string>
+    <string name="home_section_description">Learn how to turn your exchange dream from scratch into reality and pave the way for your Au Pair Passport. Simply apply the PAP method to start your journey through Europe, just like my students are already doing.</string>
+    <string name="label_europe">Europe</string>
+    <string name="label_new_life">the new life</string>
+    <string name="action_start_journey">Start My Journey</string>
+    <string name="cd_play_intro">Play intro video</string>
+    <string name="label_play_intro">Watch how it works</string>
+    <string name="label_students_count">99+ students</string>
+    <string name="label_secure_purchase">secure purchase</string>
+    <string name="label_guarantee">7 days guarantee</string>
+
+
+    <string-array name="home_title_variations">
+        <item>Europe</item>
+        <item>New life</item>
+    </string-array>
+
+    <string name="label_exchange_details_1">I know your biggest dream is to explore the world out there, and</string>
+    <string name="label_exchange_details_2">going on an exchange\nwill make your dreams\ncome true!</string>
+    <string name="label_exchange_details_3">Are you tired of searching and not finding a way to travel without it costing you a fortune?\nDo you feel disappointed, chasing a dream that seems unattainable?\nHave you tried to go through the process alone but didn't get the expected results?</string>
+
+    <string name="label_exchange_benefits_1">Get ready to learn the step-by-step process for the cheapest exchange in the world, allowing you to</string>
+    <string name="label_exchange_benefits_2">live in Europe, with a visa + accommodation\nand money in your pocket</string>
+    <string name="label_exchange_benefits_3">in Euros</string>
+
+    <string name="label_requirements_1">Want to know if\nthe mentoring is for you?</string>
+    <string name="label_requirements_2">You are a woman aged between 18 and 28.</string>
+    <string name="label_requirements_3">You feel lost in a sea of scattered information and want to easily find the necessary documentation?</string>
+    <string name="label_requirements_4">You've always dreamed of going on an exchange and need to find a sustainable way for you?</string>
+    <string name="label_requirements_5">You already tried alone and didn’t have the expected results?</string>
+    <string name="label_requirements_6">The secret is   that there's a proven and validated path by me and my students for you to get your long-awaited MATCH and embark in the coming months.</string>
+
+    <string name="label_mentory_details_1">Au Pair Passport Mentoring</string>
+    <string name="label_mentory_details_2">The Au Pair Passport mentoring is divided into <b>7 modules of content</b> for you to watch and apply right away.</string>
+    <string name="label_mentory_details_3">No beating around the bush and straight to the point!</string>
+
+    <string name="mentory_details_section_title_1">Start Point</string>
+    <string name="mentory_details_section_desc_1">Get to know your mentor, understand why this exchange will change your life, and define your purpose.</string>
+    <string name="mentory_details_section_title_2">Boarding Plan</string>
+    <string name="mentory_details_section_desc_2">Learn to plan your exchange practically, step by step, such as: languages, financial organization, choosing a family, and the best region for you to live in Europe.</string>
+    <string name="mentory_details_section_title_3">The Choice</string>
+    <string name="mentory_details_section_desc_3">Define the chosen country for boarding and understand more details about processes and visas.</string>
+    <string name="mentory_details_section_title_4">Check-in</string>
+    <string name="mentory_details_section_desc_4">It's time to create your perfect profile from scratch and prepare to close your match. You'll have access to ready-made message templates to approach families and learn how to behave in video calls.</string>
+    <string name="mentory_details_section_title_5">Boarding Lounge</string>
+    <string name="mentory_details_section_desc_5">You've closed the match, and now what? Don't worry, you've come this far, learn how to prepare for your departure lightly, organizing your documents, opening a bank account, and packing your suitcase with essential items.</string>
+    <string name="mentory_details_section_title_6">Let's Take Off</string>
+    <string name="mentory_details_section_desc_6">You were born to soar, and I'm excited to see you up there. Get ready to buy your plane tickets, learn how everything works at the airport and immigration. Also, prepare for your arrival and adaptation in the new country.</string>
+    <string name="mentory_details_section_title_7">From My Heart to Yours</string>
+    <string name="mentory_details_section_desc_7">We are the only mentoring program that cares about your well-being. I want to prepare you to live the most beautiful days of your life and also face challenges. In the self-care module, you are the focus as a whole.</string>
+
+
+    <string name="mentory_product_title">What’s Included</string>
+    <string-array name="mentory_product_items">
+        <item>Mentoring countries: Austria, Germany, Netherlands and France</item>
+        <item>Support material for creating your profile on aupairworld</item>
+        <item>Templates and messages to send to host families</item>
+        <item>Learn how to negotiate benefits with your family</item>
+        <item>Find out how to choose the ideal family</item>
+        <item>How to open an international account</item>
+        <item>Study material for issuing a language certificate</item>
+        <item>Individual support via WhatsApp</item>
+        <item>Access to the student group</item>
+        <item>Visa support</item>
+        <item>Profile analysis on aupairworld</item>
+        <item>1 hour video call</item>
+    </string-array>
+
+    <string name="mentory_product_bonus_title">Bonuses &amp; Benefits</string>
+
+    <string-array name="mentory_product_bonuses">
+        <item>Contract analysis</item>
+        <item>Self-care and well-being module</item>
+        <item>Recipe e-book</item>
+        <item>Planning call</item>
+        <item>Learn how to travel cheaply around Europe</item>
+        <item>Partner psychologist</item>
+    </string-array>
+
+    <string-array name="mentory_product_benefits">
+        <item>Save time you would spend finding the right information on your own</item>
+        <item>Have the security of receiving guidance from those who have already experienced the process</item>
+        <item>Have access to a mentor present who lives your exchange together with you</item>
+        <item>Have access to everything you need in one place</item>
+        <item>Learn how to travel cheaply around Europe</item>
+        <item>Being part of a community that is experiencing the same things as you</item>
+    </string-array>
+
+    <string name="label_ebook_details_1">Au Pair Passport Map 2.0: The guide to unlocking your exchange in Europe.</string>
+    <string name="label_ebook_details_2">The Map is divided into 3 modules that have 17 chapters, with all the practical step-by-step instructions so you can get your hands dirty and create your own exchange journey.</string>
+    <string name="title_ebook_module_1">Start Point</string>
+    <string name="subtitle_ebook_module_1">Module 1</string>
+    <string-array name="ebook_module_1_items">
+        <item>What is an au pair?</item>
+        <item>Responsibilities</item>
+        <item>Dictionary</item>
+        <item>Requirements</item>
+        <item>Available countries</item>
+        <item>Languages</item>
+    </string-array>
+
+    <string name="title_ebook_module_2">Warming up the engines</string>
+    <string name="subtitle_ebook_module_2">Module 2</string>
+    <string-array name="ebook_module_2_items">
+        <item>How to create a profile</item>
+        <item>Where to find host families</item>
+        <item>Approach message and call with the family</item>
+        <item>Documentation</item>
+    </string-array>
+
+    <string name="title_ebook_module_3">Time to take off</string>
+    <string name="subtitle_ebook_module_3">Module 3</string>
+    <string-array name="ebook_module_3_items">
+        <item>I closed the contract, now what?</item>
+        <item>Bags packed</item>
+        <item>International account</item>
+        <item>Extra hour</item>
+        <item>From my heart to yours</item>
+    </string-array>
+    <string name="action_buy_ebook">Buy for </string>
+    <string name="action_buy_ebook_price">R$ 97.00</string>
+
+    <string name="label_about_mentor_1">Andreza Andrade</string>
+    <string name="label_about_mentor_2">your mentor!</string>
+    <string name="label_about_mentor_3">Hi future exchange student, let me introduce myself to you! I'm originally from Rio de Janeiro and I've always dreamed of traveling the world and I've also always been crazy about exchange research.I made my dream come true through the au pair exchange in 2021/2022 and traveled to more than 8 countries that year. And that's what I want for you!\n\nThe au pair will be the gateway to new opportunities, self-knowledge and especially the realization of dreams for you.My biggest purpose is to encourage people to achieve their dreams and embrace their own identity. I believe that each being is unique, which is why I seek to connect people with the best version of themselves.I'm more than ready to see you take off, I'll meet you on the journey.</string>
+    <string name="label_about_mentor_4">With enthusiasm, Andreza Andrade.</string>
+
+    <string name="label_feedback_1">I know you'll be the next to take off\nand send me messages like these:</string>
+
+    <string name="title_faq">FAQ</string>
+    <string name="cd_faq_item_arrow_down">Expand or collapse item</string>
+
+    <string name="title_faq_1">How long will I have access?</string>
+    <string name="desc_faq_1">You'll have access to the PAP Method platform and my support for 1 year.</string>
+
+    <string name="title_faq_2">How long will I have access?</string>
+    <string name="desc_faq_2">You'll have access to the PAP Method platform and my support for 1 year.</string>
+
+    <string name="title_faq_3">How long will I have access?</string>
+    <string name="desc_faq_3">You'll have access to the PAP Method platform and my support for 1 year.</string>
+
+    <string name="title_faq_4">How long will I have access?</string>
+    <string name="desc_faq_4">You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.You'll have access to the PAP Method platform and my support for 1 year.</string>
+</resources>
