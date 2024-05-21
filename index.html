@@ -3,65 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compose App</title>
-
-    <script type="application/javascript" src="skiko.js"></script>
-    <script type="application/javascript" src="composeApp.js"></script>
-
-    <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            overflow: hidden;
-            border: 0;
-            box-sizing: border-box;
-        }
-
-        #loading-indicator {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-        }
-
-        .spinner {
-            border: 4px solid rgba(0, 100, 105, 1); /* Color set to 0xFF006971 */
-            border-left-color: rgba(0, 100, 105, 0.1);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        #player {
-            position: absolute;
-            top: 80px;
-            left: 0;
-            z-index: 999;
-            pointer-events: none;
-            visibility: hidden;
-            border: 5px solid #FF6D00;
-        }
-    </style>
 
     <script>
-        let isLoaded = false;
-
-        // Sets the viewport to the correct size for mobile devices
         window.addEventListener("load", function(){ onLoad() } );
+        // Sets the viewport to the correct size for mobile devices
         function onLoad() {
            window.setTimeout(function() {
              // Replace the default viewport for mobile with one that uses the devicePixelRatio
@@ -99,22 +44,48 @@
               }
            }
 
-           return "width=" + ((calcWidth * window.devicePixelRatio)/2) + ", initial-scale=1.0";
+           return "width=" + ((calcWidth * getDevicePixelRatio())/2) + ", initial-scale=1.0";
         }
 
-        function onLoadFinished() {
-            isLoaded = true;
-            document.getElementById("loading-indicator").style.display = "none";
+        function getDevicePixelRatio() {
+            var mediaQuery;
+            var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+            if (window.devicePixelRatio !== undefined && !is_firefox) {
+                return window.devicePixelRatio;
+            } else if (window.matchMedia) {
+                mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
+                  (min--moz-device-pixel-ratio: 1.5),\
+                  (-o-min-device-pixel-ratio: 3/2),\
+                  (min-resolution: 1.5dppx)";
+                if (window.matchMedia(mediaQuery).matches) {
+                    return 1.5;
+                }
+                mediaQuery = "(-webkit-min-device-pixel-ratio: 2),\
+                  (min--moz-device-pixel-ratio: 2),\
+                  (-o-min-device-pixel-ratio: 2/1),\
+                  (min-resolution: 2dppx)";
+                if (window.matchMedia(mediaQuery).matches) {
+                    return 2;
+                }
+                mediaQuery = "(-webkit-min-device-pixel-ratio: 0.75),\
+                  (min--moz-device-pixel-ratio: 0.75),\
+                  (-o-min-device-pixel-ratio: 3/4),\
+                  (min-resolution: 0.75dppx)";
+                if (window.matchMedia(mediaQuery).matches) {
+                    return 0.7;
+                }
+            } else {
+                return 1;
+            }
         }
-
     </script>
-
+    <title>PassaporteAuPair</title>
+    <script type="application/javascript" src="skiko.js"></script>
+    <script type="application/javascript" src="composeApp.js"></script>
 </head>
 <body>
-<div id="loading-indicator">
-    <div class="spinner"></div>
+<div>
+    <canvas id="ComposeTarget"></canvas>
 </div>
-<!--    <div id="player"></div>-->
-<canvas id="ComposeTarget"></canvas>
 </body>
 </html>
