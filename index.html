@@ -3,60 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose App</title>
 
-<!--    <script>-->
-<!--        window.addEventListener("load", function(){ onLoad() } );-->
-<!--        // Sets the viewport to the correct size for mobile devices-->
-<!--        function onLoad() {-->
-<!--           window.setTimeout(function() {-->
-<!--             // Replace the default viewport for mobile with one that uses the devicePixelRatio-->
-<!--             let meta = document.querySelector('meta[name="viewport"]')-->
-<!--             meta.content = calcMetaViewportContent(innerWidth);-->
-<!--             document.head.appendChild(meta);-->
-<!--           }, 5);-->
-<!--        }-->
+    <script type="application/javascript" src="skiko.js"></script>
+    <script type="application/javascript" src="composeApp.js"></script>
 
-<!--        screen.orientation.addEventListener("change", (event) => {-->
-<!--          const type = event.target.type;-->
-<!--          const angle = event.target.angle;-->
-<!--          var calcWidth;-->
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow: hidden;
+            border: 0;
+            box-sizing: border-box;
+        }
 
-<!--          // Reset to default viewport for mobile-->
-<!--          let meta = document.querySelector('meta[name="viewport"]')-->
-<!--          meta.content = "width=device-width, initial-scale=1";-->
+        #loading-indicator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
 
-<!--          // Adjust the viewport for mobile after orientation change.-->
-<!--          setTimeout(() => {-->
-<!--             meta.content = calcMetaViewportContent();-->
-<!--          }, 50);-->
-<!--        });-->
+        .spinner {
+            border: 4px solid rgba(0, 100, 105, 1); /* Color set to 0xFF006971 */
+            border-left-color: rgba(0, 100, 105, 0.1);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
 
-<!--        function calcMetaViewportContent(actualWidth) {-->
-<!--           var calcWidth;-->
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-<!--           if(actualWidth != undefined) {-->
-<!--              calcWidth = actualWidth;-->
-<!--           } else {-->
-<!--              if (screen.orientation.type.includes("landscape")) {-->
-<!--                 calcWidth = screen.height;-->
-<!--              } else {-->
-<!--                 calcWidth = screen.width;-->
-<!--              }-->
-<!--           }-->
+        #player {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            z-index: 999;
+            pointer-events: none;
+            visibility: hidden;
+            border: 5px solid #FF6D00;
+        }
+    </style>
 
-<!--           return "width=" + ((calcWidth * window.devicePixelRatio)/2) + ", initial-scale=1.0";-->
-<!--        }-->
-<!--    </script>-->
-    <title>PassaporteAuPair</title>
+    <script>
+        let isLoaded = false;
 
-    <script src="skiko.js"></script>
-<!--    <script type="application/javascript" src="skiko.js"></script>-->
-<!--    <script type="application/javascript" src="composeApp.js"></script>-->
+        // Sets the viewport to the correct size for mobile devices
+        window.addEventListener("load", function(){ onLoad() } );
+        function onLoad() {
+           window.setTimeout(function() {
+             // Replace the default viewport for mobile with one that uses the devicePixelRatio
+             let meta = document.querySelector('meta[name="viewport"]')
+             meta.content = calcMetaViewportContent(innerWidth);
+             document.head.appendChild(meta);
+           }, 5);
+        }
+
+        screen.orientation.addEventListener("change", (event) => {
+          const type = event.target.type;
+          const angle = event.target.angle;
+          var calcWidth;
+
+          // Reset to default viewport for mobile
+          let meta = document.querySelector('meta[name="viewport"]')
+          meta.content = "width=device-width, initial-scale=1";
+
+          // Adjust the viewport for mobile after orientation change.
+          setTimeout(() => {
+             meta.content = calcMetaViewportContent();
+          }, 50);
+        });
+
+        function calcMetaViewportContent(actualWidth) {
+           var calcWidth;
+
+           if(actualWidth != undefined) {
+              calcWidth = actualWidth;
+           } else {
+              if (screen.orientation.type.includes("landscape")) {
+                 calcWidth = screen.height;
+              } else {
+                 calcWidth = screen.width;
+              }
+           }
+
+           return "width=" + ((calcWidth * window.devicePixelRatio)/2) + ", initial-scale=1.0";
+        }
+
+        function onLoadFinished() {
+            isLoaded = true;
+            document.getElementById("loading-indicator").style.display = "none";
+        }
+
+    </script>
+
 </head>
 <body>
-<div>
-    <canvas id="ComposeTarget"></canvas>
+<div id="loading-indicator">
+    <div class="spinner"></div>
 </div>
-<script src="composeApp.js"></script>
+<!--    <div id="player"></div>-->
+<canvas id="ComposeTarget"></canvas>
 </body>
 </html>
