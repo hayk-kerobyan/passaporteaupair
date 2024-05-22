@@ -2,90 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script>
-        window.addEventListener("load", function(){ onLoad() } );
-        // Sets the viewport to the correct size for mobile devices
-        function onLoad() {
-           window.setTimeout(function() {
-             // Replace the default viewport for mobile with one that uses the devicePixelRatio
-             let meta = document.querySelector('meta[name="viewport"]')
-             meta.content = calcMetaViewportContent(innerWidth);
-             document.head.appendChild(meta);
-           }, 5);
-        }
-
-        screen.orientation.addEventListener("change", (event) => {
-          const type = event.target.type;
-          const angle = event.target.angle;
-          var calcWidth;
-
-          // Reset to default viewport for mobile
-          let meta = document.querySelector('meta[name="viewport"]')
-          meta.content = "width=device-width, initial-scale=1";
-
-          // Adjust the viewport for mobile after orientation change.
-          setTimeout(() => {
-             meta.content = calcMetaViewportContent();
-          }, 50);
-        });
-
-        function calcMetaViewportContent(actualWidth) {
-           var calcWidth;
-
-           if(actualWidth != undefined) {
-              calcWidth = actualWidth;
-           } else {
-              if (screen.orientation.type.includes("landscape")) {
-                 calcWidth = screen.height;
-              } else {
-                 calcWidth = screen.width;
-              }
-           }
-
-           return "width=" + ((calcWidth * getDevicePixelRatio())/2) + ", initial-scale=1.0";
-        }
-
-        function getDevicePixelRatio() {
-            var mediaQuery;
-            var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-            if (window.devicePixelRatio !== undefined && !is_firefox) {
-                return window.devicePixelRatio;
-            } else if (window.matchMedia) {
-                mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
-                  (min--moz-device-pixel-ratio: 1.5),\
-                  (-o-min-device-pixel-ratio: 3/2),\
-                  (min-resolution: 1.5dppx)";
-                if (window.matchMedia(mediaQuery).matches) {
-                    return 1.5;
-                }
-                mediaQuery = "(-webkit-min-device-pixel-ratio: 2),\
-                  (min--moz-device-pixel-ratio: 2),\
-                  (-o-min-device-pixel-ratio: 2/1),\
-                  (min-resolution: 2dppx)";
-                if (window.matchMedia(mediaQuery).matches) {
-                    return 2;
-                }
-                mediaQuery = "(-webkit-min-device-pixel-ratio: 0.75),\
-                  (min--moz-device-pixel-ratio: 0.75),\
-                  (-o-min-device-pixel-ratio: 3/4),\
-                  (min-resolution: 0.75dppx)";
-                if (window.matchMedia(mediaQuery).matches) {
-                    return 0.7;
-                }
-            } else {
-                return 1;
-            }
-        }
-    </script>
-    <title>PassaporteAuPair</title>
-    <script type="application/javascript" src="skiko.js"></script>
-    <script type="application/javascript" src="composeApp.js"></script>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0">
+    <title>Passaporte AuPair</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <script src="skiko.js"></script>
+    <script type="application/javascript" src="composeApp.js" defer></script>
 </head>
 <body>
-<div>
-    <canvas id="ComposeTarget"></canvas>
-</div>
+<div id="composeTarget"></div>
 </body>
 </html>
